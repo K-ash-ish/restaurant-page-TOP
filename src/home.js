@@ -2,7 +2,7 @@ function createNav(){
     const nav = document.createElement('nav');
     const navEl = `
     <ul id = "navbar">
-    <h1>Eat<span class = "color">Treat</span></h1>
+                <h1>Eat<span class = "color">Treat</span></h1>
                 <li class = "nav-items"><a src = "#home">Home</a></li>
                 <li class = "nav-items"><a src = "#menu">Menu</a></li>
                 <li class = "nav-items"><a src = "#contact">Contact</a></li>

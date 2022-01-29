@@ -40,6 +40,7 @@ h2{
     letter-spacing: 3.5px;
 }
 
+
 .color{
     color: #ff0022;
 }
@@ -51,7 +52,6 @@ h2{
 }
 .left-home{
     height: 50vh;
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,16 +67,14 @@ h2{
     color: #ff0022;
     font-weight: 700;
     font-family: 'Poppins';
-    border: 1px solid black;
+    border: 1px solid rgb(138, 138, 138);
     padding: 1em 2em;
     background-color: transparent;
     cursor: pointer;
 }
 .order-btn:hover{
     transition: 1s;
-    border-radius: 0.3em;
-    background-color:rgb(255, 53, 94);
-    color: black;
+    box-shadow: 5px 10px 10px gray;
 }
 /* right of home section */
 .right-home{
@@ -92,6 +90,23 @@ h2{
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out; 
+}
+
+/* Mobile Phones */
+@media (max-width:1050px) {
+    h1{
+        font-size: 1.3em;
+    }
+    h2{
+        font-size: 1.7em;
+    }
+    #hero-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    
 }
 
 
