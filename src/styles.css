@@ -32,6 +32,10 @@ h1{
 h2{
     font-size: 3em;
 }
+a{
+    text-decoration: none;
+    color:black;
+}
 #navbar{
     display: flex;
     width: 100%;
@@ -91,6 +95,16 @@ h2{
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out; 
 }
+
+footer{
+    padding: 1em 0;
+    display: flex;
+}
+footer> p{
+    margin: 0 auto;
+    letter-spacing: 2px;
+}
+
 
 /* Mobile Phones */
 @media (max-width:1050px) {
