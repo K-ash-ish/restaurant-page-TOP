@@ -1,5 +1,8 @@
 import './styles.css'
+import { createNav, createhome } from "./home";
 
-import { createNav } from "./home";
 
-createNav();
+const contentPage = document.querySelector("#content");
+contentPage.append(createNav())
+contentPage.append(createhome());
+
