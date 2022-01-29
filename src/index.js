@@ -1,2 +1,5 @@
+import './styles.css'
 
-console.log("working");
+import { createNav } from "./home";
+
+createNav();
