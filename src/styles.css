@@ -48,7 +48,7 @@ a{
 .color{
     color: #ff0022;
 }
-#hero-section{
+#home{
     height: 90vh;
     display: flex;
     justify-content: space-around;
@@ -105,6 +105,64 @@ footer> p{
     letter-spacing: 2px;
 }
 
+/* Home section end */
+
+/* Menu section */
+.menu-btn{
+    display: flex;
+    justify-content: center;
+    
+}
+.menu-btn button{
+    text-transform: capitalize;
+    margin: 2em 1em;
+    padding: 0.5em 2em;
+    font-weight: 700;
+    color: #ff4f66;
+    border: 1px solid gray;
+    border-radius: 0.5em;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 0.5s;
+}
+.menu-btn button:hover{
+    transition: 1s ;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.menu-container{
+    border: 1px solid black;
+    padding: 2em 0;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 40% 40%;
+    grid-gap: 2em 2em;
+}
+.menu-items{
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-transform: capitalize;
+    border: 1px dotted black;
+}
+:is(.item-detail) :is(h3, p, button ){
+    justify-content: flex-start;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.item-detail > button{
+    padding: 5px 10px;
+    color: #ff4f66;    
+}
+.menu-items img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 1em;
+}
+
+
 
 /* Mobile Phones */
 @media (max-width:1050px) {
@@ -114,7 +172,7 @@ footer> p{
     h2{
         font-size: 1.7em;
     }
-    #hero-section{
+    #home{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -122,5 +180,4 @@ footer> p{
     }
     
 }
-
 

@@ -1,11 +1,11 @@
 function createNav(){
     const nav = document.createElement('nav');
     const navEl = `
-    <ul id = "navbar">
+            <ul id = "navbar">
                 <h1>Eat<span class = "color">Treat</span></h1>
-                <li class = "nav-items"><a src = "#home">Home</a></li>
-                <li class = "nav-items"><a src = "#menu">Menu</a></li>
-                <li class = "nav-items"><a src = "#contact">Contact</a></li>
+                <li class = "nav-items"><a class="home-btn" src = "#home" data-id = "home" >Home</a></li>
+                <li class = "nav-items"><a class="menu-btn" src = "#menu" data-id = "menu" >Menu</a></li>
+                <li class = "nav-items"><a class="contact-btn" src = "#contact" data-id = "contact">Contact</a></li>
             </ul>
         `;
         nav.insertAdjacentHTML('afterbegin',navEl);
@@ -13,7 +13,7 @@ function createNav(){
 }
 function createhome (){
     const homeSection = document.createElement("section");
-    homeSection.setAttribute("id", "hero-section")
+    homeSection.setAttribute("id", "home")
     const homeEl = `
             <div class="left-home">
                 <h2>Welcome to Eat<span class = "color">Treat</span></h1>
