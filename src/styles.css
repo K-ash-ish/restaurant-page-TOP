@@ -40,6 +40,7 @@ a{
     letter-spacing: 3.5px;
 }
 .nav-items{
+    letter-spacing: 1.5px;
     cursor: pointer;
     border: none;
     background-color: transparent;
@@ -50,7 +51,7 @@ a{
 .color{
     color: #ff0022;
 }
-#home{
+.home{
     height: 90vh;
     display: flex;
     justify-content: space-around;
@@ -176,7 +177,7 @@ footer> p{
     h2{
         font-size: 1.7em;
     }
-    #home{
+    .home{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -187,5 +188,8 @@ footer> p{
 
 .active{
     display: block;
+}
+.inactive{
+    display: none;
 }
 

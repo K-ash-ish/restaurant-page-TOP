@@ -2,7 +2,7 @@ const contentPage = document.querySelector("#content");
 
 function createhome (){
     const homeSection = document.createElement("section");
-    homeSection.setAttribute("id", "home")
+    homeSection.classList.add("home")
     const homeEl = `
             <article class="left-home">
                 <h2>Welcome to Eat<span class = "color">Treat</span></h1>
