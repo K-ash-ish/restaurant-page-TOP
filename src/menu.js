@@ -83,24 +83,26 @@ const menuItems = [
   ];
 
 function displayMenuItems(){
+    const menuSection = document.createElement('section')
     const menuContainer = document.createElement("div");
+    menuSection.classList.add("menu")
     menuContainer.classList.add("menu-container")
     menuContainer.setAttribute("id", "menu")
     let menu = menuItems.map( (item) =>{
-        return `
-        <div class = "menu-items">
-            <img class = "item-img" src = ${item.img}>
-            <div class = "item-detail">
-                <h3 class = "item-name">${item.title}</h3>
-                <p class = "item-desc">${item.desc}</p>
-                <button class="order-btn">Add To Cart</button>
-            </div>
-        </div>
-        `
-    });
-    menu = menu.join("");
+      return `
+      <div class = "menu-items">
+      <img class = "item-img" src = ${item.img}>
+      <div class = "item-detail">
+      <h3 class = "item-name">${item.title}</h3>
+      <p class = "item-desc">${item.desc}</p>
+      <button class="order-btn">Add To Cart</button>
+      </div>
+      </div>
+      `
+    }).join("");
     menuContainer.innerHTML = menu
-    contentPage.append(menuContainer) ;
+    menuSection.appendChild(menuContainer);
+    contentPage.append(menuSection) ;
 }
 
 function createMenu(){

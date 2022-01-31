@@ -108,7 +108,7 @@ footer> p{
 /* Home section end */
 
 /* Menu section */
-.menu-btn{
+/* .menu-btn{
     display: flex;
     justify-content: center;
     
@@ -128,8 +128,10 @@ footer> p{
 .menu-btn button:hover{
     transition: 1s ;
     box-shadow: 5px 5px 10px gray;
+} */
+.menu{
+    display: none;
 }
-
 .menu-container{
     border: 1px solid black;
     padding: 2em 0;
