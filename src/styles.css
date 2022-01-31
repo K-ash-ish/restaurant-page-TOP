@@ -17,10 +17,6 @@ html{
 body{
     background-color: #edfdfb;
 }
-li{
-    list-style: none;
-    cursor: pointer;
-}
 nav{
     display: flex;
     justify-content: space-around;
@@ -43,7 +39,13 @@ a{
     align-items: center;
     letter-spacing: 3.5px;
 }
-
+.nav-items{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-family: 'Poppins';
+    font-size: 1em;
+}
 
 .color{
     color: #ff0022;
@@ -181,5 +183,9 @@ footer> p{
         
     }
     
+}
+
+.active{
+    display: block;
 }
 
