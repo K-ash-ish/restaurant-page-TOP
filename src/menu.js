@@ -82,23 +82,11 @@ const menuItems = [
       }
   ];
 
-  //to display dynamic category button according to given data
-// function displayCategoryBtn(){
-//     const category  = menuItems.reduce( function(values, items){
-//         if(!values.includes(items.category)){
-//             values.push(items.category);
-//         }
-//         return values;
-//     }, ['all'])
-//     const categoryBtn = category.map( (item)=> {
-//         return `<button class="category-btn" data-category = "${item}">${item}</button>`
-//     }).join("");
-
-//     return categoryBtn;
-// }
-
 function displayMenuItems(){
-    const menu = menuItems.map( (item) =>{
+    const menuContainer = document.createElement("div");
+    menuContainer.classList.add("menu-container")
+    menuContainer.setAttribute("id", "menu")
+    let menu = menuItems.map( (item) =>{
         return `
         <div class = "menu-items">
             <img class = "item-img" src = ${item.img}>
@@ -109,49 +97,15 @@ function displayMenuItems(){
             </div>
         </div>
         `
-    }).join("")
-    return menu;
+    });
+    menu = menu.join("");
+    menuContainer.innerHTML = menu
+    contentPage.append(menuContainer) ;
 }
-// function filterBtn(menu){
-//     const btn = menu.querySelectorAll(".category-btn")
-//     btn.forEach((button) => {
-//         button.addEventListener('click', (e)=>{
-//            const category = e.currentTarget.dataset.category;
-//            const menuCategory = menuItems.filter(function (menuItem) {
-//             // console.log(menuItem.category);
-//             if (menuItem.category === category) {
-//               return menuItem;
-//             }
-//           });
-//           console.log(category)
-//           console.log(menuCategory)
-//           if (category === "all") {
-//             menu.children[1].insertAdjacentHTML('afterbegin',displayMenuItems(menuItems);
-//           } else {
-//              displayMenuItems(menuCategory);
-//           }
-//         })
-//         console.log(menu.children[1])
-        
-//     });
-// }
+
 function createMenu(){
-    const menu = document.createElement('section');
-    menu.setAttribute("id", "menu")
-    const menuEl = `
-    <div class = "menu-container">
-    ${displayMenuItems()}
-    </div>
-    `;
-    menu.insertAdjacentHTML("afterbegin", menuEl);
-    
-    // filterBtn(menu);
-    contentPage.append(menu);
+  displayMenuItems();
 }
 
 export{createMenu};
-/// for categories 
-// <ul class= "menu-btn">
-//     ${displayCategoryBtn()}
-// </ul>
 
