@@ -1,3 +1,4 @@
+const contentPage = document.querySelector("#content");
 const menuItems = [
     {
       id: 1,
@@ -145,7 +146,7 @@ function createMenu(){
     menu.insertAdjacentHTML("afterbegin", menuEl);
     
     // filterBtn(menu);
-    return menu;
+    contentPage.append(menu);
 }
 
 export{createMenu};

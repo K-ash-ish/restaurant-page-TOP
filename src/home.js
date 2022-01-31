@@ -1,3 +1,5 @@
+const contentPage = document.querySelector("#content");
+
 function createNav(){
     const nav = document.createElement('nav');
     const navEl = `
@@ -9,7 +11,7 @@ function createNav(){
             </ul>
         `;
         nav.insertAdjacentHTML('afterbegin',navEl);
-        return nav;
+        contentPage.append(nav)
 }
 function createhome (){
     const homeSection = document.createElement("section");
@@ -26,7 +28,7 @@ function createhome (){
             
         `
     homeSection.insertAdjacentHTML('beforeend', homeEl)
-    return homeSection;
+    contentPage.append(homeSection);
 }
 export {createNav, createhome};
 
