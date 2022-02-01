@@ -50,7 +50,7 @@ homeButton.addEventListener('click', ()=>{
 // for foooter
 const footer = document.createElement("footer");
 const footerEl = `
-        <p>Made With ❤️ <a href="https://github.com/K-ash-ish">Kashish</a></p>
+        <p>Made With ❤️ by <a href="https://github.com/K-ash-ish">Kashish</a></p>
     `;
 footer.insertAdjacentHTML("afterbegin",footerEl)
 body.appendChild(footer);
