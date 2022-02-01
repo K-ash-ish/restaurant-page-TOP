@@ -134,9 +134,9 @@ footer> p{
 } */
 .menu{
     display: none;
+    border: 1px solid black;
 }
 .menu-container{
-    border: 1px solid black;
     padding: 2em 0;
     display: grid;
     place-content: center;
@@ -174,7 +174,27 @@ footer> p{
     display: none;
 }
 
-
+.pagination{
+    margin: 10px 0;
+    width: 100%;
+    color: red;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.pagination button{
+    cursor: pointer;
+    background-color: transparent;
+    padding: 5px 10px;
+    /* margin: 10px 0; */
+    margin: 0 1em;
+    transition: 1s;
+}
+.pagination button:hover{
+    transition: 1s;
+    box-shadow: 5px 5px 10px black;
+}
 
 /* Mobile Phones */
 @media (max-width:1050px) {

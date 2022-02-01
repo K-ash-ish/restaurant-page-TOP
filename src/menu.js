@@ -85,24 +85,50 @@ const menuItems = [
 function displayMenuItems(){
     const menuSection = document.createElement('section')
     const menuContainer = document.createElement("div");
+   
     menuSection.classList.add("menu")
     menuContainer.classList.add("menu-container")
     menuContainer.setAttribute("id", "menu")
+    // //FOR PAGES
+    // const pageNo = document.createElement('div');// for page button
+    // pageNo.classList.add('pagination'); // adding calss to page number section
+    // let page = 1;
+    // let rows_per_page = 6;
+    // page--;
+    // let start = rows_per_page  * page;
+    // let end = rows_per_page + start
+    // let pageCount = Math.ceil((menuItems.length)/rows_per_page)
+   
+    // for(let i = start ; i< pageCount; i++){
+    //   let btn = document.createElement('button');
+    //   btn.classList.add('page-btn')
+    //   btn.dataset.pageId = i +1;
+    //   btn.textContent = i+1;
+    //   pageNo.appendChild(btn)
+    // }
+    // const pageBtn = pageNo.querySelectorAll('.page-btn');
+    //   pageNo.addEventListener('click', (e)=>{
+    //   start = e.target.dataset.pageId;
+      
+    // })
+    // let paginatedItems = menuItems.slice(start, end);
     let menu = menuItems.map( (item) =>{
       return `
-      <div class = "menu-items">
-      <img class = "item-img" src = ${item.img}>
-      <div class = "item-detail">
-      <h3 class = "item-name">${item.title}</h3>
-      <p class = "item-desc">${item.desc}</p>
-      <button class="order-btn">Add To Cart</button>
-      </div>
-      </div>
-      `
-    }).join("");
-    menuContainer.innerHTML = menu
-    menuSection.appendChild(menuContainer);
-    contentPage.append(menuSection) ;
+        <div class = "menu-items">
+        <img class = "item-img" src = ${item.img}>
+        <div class = "item-detail">
+        <h3 class = "item-name">${item.title}</h3>
+        <p class = "item-desc">${item.desc}</p>
+        <button class="order-btn">Add To Cart</button>
+        </div>
+        </div>
+        `
+      }).join("");
+
+      menuContainer.innerHTML = menu;
+      menuSection.appendChild(menuContainer);
+      contentPage.append(menuSection) ;
+    
 }
 
 function createMenu(){

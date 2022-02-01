@@ -1,11 +1,9 @@
 import './styles.css'
 import { createhome } from "./home";
-import {createMenu} from "./menu"
+import {createMenu, pagination} from "./menu"
 
 const body = document.querySelector("body");
 const contentPage = document.querySelector("#content");
-
-
 
 //creating nav
 function createNav(){
@@ -24,7 +22,6 @@ function createNav(){
 createNav();
 createhome();
 createMenu();
-
 const homeButton = document.querySelector('.home-btn')
 const menuButton = document.querySelector('.menu-btn')
 
@@ -37,6 +34,7 @@ menuButton.addEventListener('click',()=>{
         homeSection.classList.add("inactive")
         }
     }
+   
 });
 homeButton.addEventListener('click', ()=>{
     const homeSection = document.querySelector('.home')
@@ -49,8 +47,6 @@ homeButton.addEventListener('click', ()=>{
     }
 });
 
-
-
 // for foooter
 const footer = document.createElement("footer");
 const footerEl = `
@@ -58,3 +54,4 @@ const footerEl = `
     `;
 footer.insertAdjacentHTML("afterbegin",footerEl)
 body.appendChild(footer);
+
